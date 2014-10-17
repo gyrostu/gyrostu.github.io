@@ -1,0 +1,118 @@
+/*
+* Bones V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 1000 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+body {  }
+
+
+/* #Base 1000 Grid
+================================================== */
+
+    .cont { position: relative; width: 960px; margin: 0 auto; padding: 0; background: url(../grid.png) repeat-y center top; padding-bottom:200px; }
+
+    .col { float: left; display: inline; margin-left: 15px; margin-right: 0; background: #ccc; }
+    
+    .col > * {margin:15px; min-height:100px;}
+    
+    
+    /* =Grid
+    -------------------------------------------------------------------------------- */
+    
+    
+  
+    .whole { width: 96.875%; }
+    .one-half { width: 47.65625%; }   
+    
+    .one-third { width: 31.25%; } 
+    .two-thirds { width: 64.0625%; }
+    
+    .one-fourth { width: 23.046875%; }
+    .two-fourths { width: 47.65625%; }
+    .three-fourths { width: 72.265625%; }
+    
+    .one-fifth { width: 18.125%; }
+    .two-fifths { width: 37.8125%; }
+    .three-fifths { width: 57.5%; }
+    .four-fifths { width: 77.1875%; }
+    
+    
+
+/* #Tablet (Portrait)
+================================================== 
+
+    /* Note: Design for a width of 768px 
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        
+    }
+
+
+/*  #Mobile (Portrait)
+==================================================
+
+    /* Note: Design for a width of 320px 
+
+    @media only screen and (max-width: 767px) {
+        
+    }
+
+
+/* #Mobile (Landscape)
+==================================================
+
+    /* Note: Design for a width of 480px 
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .cont:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
